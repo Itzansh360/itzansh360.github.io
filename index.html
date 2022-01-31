@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>My Site</title>
+  <meta name="description" content="This is my portfolio page">
+  <meta name="author" content="Ansh">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Twinkle+Star&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+<header class="main_nav green">
+  <div class="container">
+  <div class="logo">
+   <a href="https://www.CoderCookies.com">Coder Cookies</a>
+  </div>
+</div>
+</header>
+
+
+<div class="container">
+  <div id="typewriter" class="twelve columns" style = "background-color: red";>
+  <h2 id="typetext0">Hi my name is Ansh!</h2>
+  <h2 id="typetext1">I love Computars and programming</h2>
+  <h2 id="typetext2">Check out my projects</h2>
+</div>
+</div>
+
+
+<div class="container">
+    <div class="four columns">
+    <img src="https://cdn.pixabay.com/photo/2016/10/16/16/33/dual-screen-1745705_960_720.png" />
+    </div>
+    <div class="four columns">
+    <img src="https://cdn.pixabay.com/photo/2017/09/25/18/56/social-media-2786261_960_720.jpg" />
+  </div>
+  <div class="four columns">
+    <img src="https://cdn.pixabay.com/photo/2016/03/27/18/54/technology-1283624_960_720.jpg"/>
+  </div>
+  </div>
+</div>
+
+
+<div class="main_nav green">
+  <div class="container">
+    <div class="five columns">
+      <img class="avatar" src="images/background.jpg">
+    </div>
+    <div class="seven columns">
+      <p>Hi! My name is Ansh and I am a 13 year old kid. I like stuff like video games, watching shows, coding, playing lots of sports, hanging out with my friends and many more. I started coding 2 years ago by joining a class. I learned a little bit of python, scratch, lots of HTML, Css, and JavaScript. Some of the sports i play are basketball, soccer, tennis, and many more. I also play video games like minecraft, valorant, fortnite, and a few more. Some shows that i really liked are Cobra Kai, The Flash, and the 100. </p>
+    </div>
+</div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="twelve columns">
+      <ul class="social">
+        <li class="facebook"><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+        <li class="youtube"><a href="#"><i class="fab fa-youtube"></i></a></li>
+        <li class="instagram"><a href="#"><i class="fab fa-instagram-square"></i></a></li>
+        <li class="twitter"><a href="#"><i class="fab fa-twitter"></i></a></li>
+
+      </ul>
+
+    </div>
+  </div>
+  <div>
+    <p class="copyright">Copyright 2022 Ansh. All rights reserved</p>
+  </div>
+</footer>
+
+
+
+
+
+<script type="text/javascript">
+  let allText = ["Hi my name is Ansh!", "I love Computars and programming", "Check out my projects"]
+
+  let textHeader0 = document.getElementById("typetext0")
+  let textHeader1 = document.getElementById("typetext1")
+  let textHeader2 = document.getElementById("typetext2")
+
+  let myVar0;
+  let myVar1;
+  let myVar2;
+
+  let currentIndex0;
+  let currentIndex1;
+  let currentIndex2;
+
+
+  function add0() {
+var text = allText[0].substring(0, currentIndex0 + 1);
+textHeader0.innerHTML = ">> " + text;
+currentIndex0 =currentIndex0+1;
+
+
+
+if(text === allText[0]) {
+
+
+
+clearInterval(myVar0);
+setTimeout(
+function() { myVar0 = setInterval(remove0, 50); }, 1000);
+
+}
+}
+
+function remove0(){
+  var text = allText[0].substring(0, currentIndex0 - 1);
+  textHeader0.innerHTML = ">> " + text;
+  currentIndex0 =currentIndex0-1;
+
+  if(text === ""){
+
+    clearInterval(myVar0);
+    currentIndex0 = 0
+    setTimeout(
+    function() { myVar0 = setInterval(add0, 50); }, 1000);
+    }
+}
+
+
+
+
+
+
+
+
+
+  function add1() {
+var text = allText[1].substring(0, currentIndex1 + 1);
+textHeader1.innerHTML = ">> " + text;
+currentIndex1 =currentIndex1+1;
+
+
+
+if(text === allText[1]) {
+
+
+
+clearInterval(myVar1);
+setTimeout(
+function() { myVar1 = setInterval(remove1, 50); }, 1000);
+
+}
+}
+
+function remove1(){
+  var text = allText[1].substring(0, currentIndex1 - 1);
+  textHeader1.innerHTML = ">> " + text;
+  currentIndex1 =currentIndex1-1;
+
+  if(text === ""){
+
+    clearInterval(myVar1);
+    currentIndex1 = 0
+    setTimeout(
+    function() { myVar1 = setInterval(add1, 50); }, 1000);
+    }
+}
+
+
+
+
+function add2() {
+var text = allText[2].substring(0, currentIndex0 + 1);
+textHeader2.innerHTML = ">> " + text;
+currentIndex2 =currentIndex2+1;
+
+
+
+if(text === allText[2]) {
+
+
+
+clearInterval(myVar2);
+setTimeout(
+function() { myVar2 = setInterval(remove2, 50); }, 1000);
+
+}
+}
+
+function remove2(){
+  var text = allText[2].substring(0, currentIndex0 - 1);
+  textHeader2.innerHTML = ">> " + text;
+  currentIndex2 =currentIndex2-1;
+
+  if(text === ""){
+
+    clearInterval(myVar2);
+    currentIndex2 = 0
+    setTimeout(
+    function() { myVar2 = setInterval(add2, 50); }, 1000);
+    }
+}
+
+add0();
+remove0();
+
+
+add1();
+remove1();
+
+add2();
+remove2();
+</script>
+
+
+</body>
+</html>
+
+
+
